@@ -1,7 +1,7 @@
 " mrswin.vim: allows one to toggle mswin on and off
 " Based On:	<mswin.vim> by Bram Moolenaar
 " Author:	Charles E. Campbell, Jr.
-" Version:	3
+" Version:	4
 " Date:		Jul 16, 2004
 "
 " Purpose: {{{1
@@ -53,7 +53,7 @@ endif
 if !exists("g:mrswin")
  " Initial loading of <mrswin.vim>
  let g:mrswin= 0
- call Decho("initial loading of <mrswin.vim>")
+" call Decho("initial loading of <mrswin.vim>")
 
 " ---------------------------------------------------------------------
 "  Loading Mrswin: {{{1
@@ -64,7 +64,7 @@ if !exists("g:mrswin")
   "                  or a string of single letters which are multiple maps
   "                  ex.  mapchx="abc" and maplead='\': \a \b and \c are saved
   fun! MrsWin_SaveMap(mapmode,maplead,mapchx)
-    call Dfunc("MrsWin_SaveMap(mapmode<".a:mapmode."> maplead<".a:maplead."> mapchx<".a:mapchx.">)")
+"    call Dfunc("MrsWin_SaveMap(mapmode<".a:mapmode."> maplead<".a:maplead."> mapchx<".a:mapchx.">)")
     if strpart(a:mapchx,0,1) == '<'
       " save single map <something>
       if maparg(a:mapchx,a:mapmode) != ""
@@ -83,7 +83,7 @@ if !exists("g:mrswin")
        let i= i + 1
       endwhile
     endif
-    call Dret("MrsWin_SaveMap")
+"    call Dret("MrsWin_SaveMap")
   endfun
  endif
 endif
@@ -91,7 +91,7 @@ endif
 " ---------------------------------------------------------------------
 "  Reloading MrsWin: {{{2
 if g:mrswin == 0 " Turn mswin mode on
- call Decho("reloading <MrsWin.vim>")
+" call Decho("reloading <MrsWin.vim>")
  let g:mrswin= 1
 
  " Option keeping: {{{2
@@ -251,7 +251,7 @@ if g:mrswin == 0 " Turn mswin mode on
 
 else " -----------------------------------------------------------------
  " Unloading Mrswin: {{{1
- call Decho("unloading MrsWin.vim")
+" call Decho("unloading MrsWin.vim")
  let g:mrswin= 0
 
  " Option Restoration: {{{2
