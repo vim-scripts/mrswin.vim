@@ -1,0 +1,10 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=514
+
+Sourcing <mrswin.vim> toggles between <mswin.vim> and normal Vim.  You'll find <mswin.vim> distributed with Vim as
+
+   ..\vim\vim63\mswin.vim
+
+(the leading path may vary).  This file needs to be executed instead of the default <mswin.vim>; every time it is sourced, it toggles between <mswin.vim> and Normal vim mappings and settings.  
+
+It is important that you substitute using <mrswin.vim> for <mswin.vim>; <mrswin.vim> saves the settings and mappings extant prior to doing the <mswin.vim> settings and mappings.  Consequently, if you have <mswin.vim> sourced first, then its settings and mappings are what will be restored (ie., you won't be able to toggle because both sets of settings and mappings will be the same).
+
